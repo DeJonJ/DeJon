@@ -1,0 +1,40 @@
+.hero {
+  background: linear-gradient(to bottom right, #fe8c00, #f83600);
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 0 0 100% 0;
+}
+
+.hero-title {
+  font-size: 4rem;
+  color: #000000;
+  padding: 0 20px;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  color: #333333;
+  margin-top: 2rem;
+  padding: 0 20px;
+  text-align: center;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+.hero-icons {
+  margin-top: 2rem;
+}
+
+.hero-icons a {
+  color: #ffffff;
+  margin: 0 1rem;
+  font-size: 2rem;
+}
+
+.hero-icons a:hover {
+  color: #f39c12;
+}
