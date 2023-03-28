@@ -8,8 +8,22 @@
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 999;
+  transition: background-color 0.5s ease-in-out;
 }
 
+/* onscroll css */
+
+.navbar.navbarBlack {
+  background-color: #000000;
+  /* other styles */
+}
+
+.navbar.navbarBlack a {
+  color: #ffffff;
+  /* other styles */
+}
+
+/*  */
 .navbar-left {
   font-size: 2rem;
   font-weight: bold;
@@ -33,6 +47,10 @@
   margin-left: 1rem;
   padding: 0.7rem 1rem;
   font-weight: bold;
+}
+
+.menu-links a {
+  cursor: pointer;
 }
 
 .menu-icon {

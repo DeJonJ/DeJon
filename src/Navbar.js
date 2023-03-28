@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaArrowCircleUp, FaBars } from "react-icons/fa";
 import { Link } from "react-scroll";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleMenuClick = () => {
     if (window.innerWidth <= 768) {
@@ -16,8 +17,25 @@ const Navbar = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const [navbarBlack, setNavbarBlack] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setNavbarBlack(true);
+    } else {
+      setNavbarBlack(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${navbarBlack ? "navbarBlack" : ""}`}>
       <div className="navbar-left">
         <a href="/">dejon.dev</a>
       </div>
